@@ -17,6 +17,19 @@ app.get("/test-db", async (req, res) => {
   }
 })
 
+
+app.get("/products", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM products");
+    res.json(result.rows);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error fetching products");
+  }
+});
+
+
+
 app.listen(5000, () => {
   console.log("Server running on port 5000")
 })

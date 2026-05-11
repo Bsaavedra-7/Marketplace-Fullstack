@@ -7,7 +7,8 @@ import SignUp from "./pages/SignUp";
 import ProductPage from "./pages/ProductPage";
 import CreateProduct from "./pages/CreateProduct";
 import Shop from "./pages/Shop";
-import Wishlist from "./pages/WishList";
+import Cart from "./pages/Cart";
+import WishList from "./pages/WishList";
 import Notifications from "./pages/Notifications";
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
 
         <Route path="/create-product" element={<CreateProduct />} />
+
+        <Route path="/cart" element={<Cart />} />
         
         <Route path="/wishlist" element={<WishList />} />
 
